@@ -1,0 +1,31 @@
+{
+  "name": "pnpm-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "author": "taoliujun",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@changesets/changelog-git": "^0.2.0",
+    "@changesets/cli": "^2",
+    "@commitlint/cli": "^18",
+    "@commitlint/config-conventional": "^18",
+    "@tsconfig/node18": "^18",
+    "husky": "^8",
+    "lint-staged": "^15",
+    "typescript": "^5"
+  },
+  "scripts": {
+    "changelog": "npm exec changeset add",
+    "version": "npm exec changeset version",
+    "release": "npm exec changeset publish",
+    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
+    "build": "pnpm run -r build",
+    "lint:ts": "pnpm run -r lint:ts",
+    "lint": "eslint packages --ext .ts,.js --cache",
+    "test": "echo 'test'",
+    "prepare": "husky install"
+  }
+}
