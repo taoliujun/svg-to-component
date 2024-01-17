@@ -30,7 +30,7 @@ jobs:
 
                       ---
 
-                      Commented by Action [${{github.workflow}} ${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
+                      Commented by Action [${{github.workflow}} #${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
 
     init:
         runs-on: ubuntu-latest
@@ -338,4 +338,4 @@ jobs:
 
                       ---
 
-                      Commented by Action [${{github.workflow}} ${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
+                      Commented by Action [${{github.workflow}} #${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
