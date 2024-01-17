@@ -1,8 +1,13 @@
 name: check pull request
-run-name: 'check pull request #${{ github.event.pull_request.number }}'
+run-name: '${{github.workflow}} #${{ github.event.pull_request.number }}'
 on:
     pull_request:
         types: [opened, synchronize, reopened]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+    cancel-in-progress: true
+
 jobs:
     replyChecking:
         runs-on: ubuntu-latest
@@ -25,7 +30,7 @@ jobs:
 
                       ---
 
-                      Commented by Action [${{github.workflow}}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
+                      Commented by Action [${{github.workflow}} ${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
 
     init:
         runs-on: ubuntu-latest
@@ -123,17 +128,29 @@ jobs:
                       );
 
                       if (outerr) {
-                        return `:x: Some command execution errors, no business errors.`;
+                        return `:x: Command execution failed.`;
                       }
 
                       const errorMatch = output.match(/(\d+) errors?/);
                       const warnMatch = output.match(/(\d+) warnings?/);
 
                       if (errorMatch && errorMatch?.[1] !== '0') {
-                        return `:x: ${errorMatch?.[0]} ${warnMatch?.[0]}`;
+                        return `
+                        :x: ${errorMatch?.[0]} ${warnMatch?.[0]}.
+
+                        <details><summary>Details</summary>
+                        <p>
+
+                        \`\`\`shell
+                        ${output}
+                        \`\`\`
+
+                        </p>
+                        </details>
+                        `;
                       }
 
-                      return `:white_check_mark: ${errorMatch?.[0] || '0 error'} ${warnMatch?.[0] || '0 warning'}`;
+                      return `:white_check_mark: ${errorMatch?.[0] || '0 error'} ${warnMatch?.[0] || '0 warning'}.`;
 
     typescript:
         runs-on: ubuntu-latest
@@ -187,16 +204,28 @@ jobs:
                       );
 
                       if (outerr) {
-                        return `:x: Some command execution errors, no business errors.`;
+                        return `:x: Command execution failed.`;
                       }
 
                       const errorMatch = output.match(/error TS/g);
 
                       if (errorMatch) {
-                        return `:x: ${errorMatch?.length} errors`;
+                        return `
+                        :x: ${errorMatch?.length} errors.
+                        
+                        <details><summary>Details</summary>
+                        <p>
+
+                        \`\`\`shell
+                        ${output}
+                        \`\`\`
+                        
+                        </p>
+                        </details>
+                        `;
                       }
 
-                      return `:white_check_mark: ${'0 error'}`;
+                      return `:white_check_mark: ${'0 error'}.`;
 
     unitTest:
         runs-on: ubuntu-latest
@@ -254,16 +283,28 @@ jobs:
                       const failMatch = outerr.match(/Test Suites: \d+ failed/);
 
                       if (failMatch) {
-                        return `:x: ${failMatch?.[0]}`;
+                        return `
+                        :x: ${failMatch?.[0]}.
+                        
+                        <details><summary>Details</summary>
+                        <p>
+                        
+                        \`\`\`shell
+                        ${outerr.substring(outerr.indexOf('Summary of all failing tests'))}
+                        \`\`\`
+
+                        </p>
+                        </details>
+                        `;
                       }
 
                       const errorMatch = outerr.match(/Jest: "global" coverage threshold for lines \([0-9\.]+%\) not met: [0-9\.]+%/);
 
                       if (errorMatch) {
-                        return `:x: ${errorMatch?.[0]}`;
+                        return `:x: ${errorMatch?.[0]}.`;
                       }
 
-                      return `:white_check_mark: passed`;
+                      return `:white_check_mark: passed.`;
 
     replyResult:
         runs-on: ubuntu-latest
@@ -297,4 +338,4 @@ jobs:
 
                       ---
 
-                      Commented by Action [${{github.workflow}}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
+                      Commented by Action [${{github.workflow}} ${{ github.event.pull_request.number }}](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}), last updated on ${{steps.getDateTime.outputs.result}}.
