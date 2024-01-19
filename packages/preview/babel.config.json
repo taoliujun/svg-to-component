@@ -1,0 +1,4 @@
+{
+    "sourceType": "unambiguous",
+    "presets": [["react-app", { "flow": false, "typescript": true, "runtime": "automatic" }]]
+}

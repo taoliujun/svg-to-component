@@ -1,10 +1,12 @@
-const path = require('path');
-
 module.exports = {
+    extends: ['@taoliujun/eslint-config'],
     overrides: [
         {
-            files: ['**/*.ts', '**/*.tsx'],
-            parserOptions: { project: path.resolve(__dirname, './tsconfig.json') },
+            files: ['./src/index.ts'],
+            rules: {
+                'import/no-unused-modules': ['off'],
+                'import/no-default-export': ['off'],
+            },
         },
     ],
 };
