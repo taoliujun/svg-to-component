@@ -1,0 +1,51 @@
+{
+    "name": "svg-to-component",
+    "version": "1.0.0",
+    "description": "parse svg files into react components, support dynamic colors and preview.",
+    "keywords": [
+        "svg",
+        "parse svg",
+        "svg to component",
+        "react svg"
+    ],
+    "homepage": "https://github.com/taoliujun/svg-to-component",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/taoliujun/svg-to-component.git"
+    },
+    "bugs": {
+        "url": "https://github.com/taoliujun/svg-to-component/issues"
+    },
+    "files": [
+        "dist",
+        "/*.md",
+        "package.json"
+    ],
+    "main": "./dist/index.js",
+    "bin": {
+        "svg-to-component": "./dist/index.js"
+    },
+    "scripts": {
+        "lint": "eslint --cache src",
+        "lint:ts": "tsc --noEmit",
+        "build": "rm -rf ./dist && tsc"
+    },
+    "engines": {
+        "node": "^20"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "commander": "^11.1.0",
+        "fast-glob": "^3.3.2",
+        "lodash": "^4.17.21",
+        "progress": "^2.0.3",
+        "svg-to-component.parse": "workspace:^",
+        "svg-to-component.preview": "workspace:^"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.2",
+        "@types/lodash": "^4.14.195",
+        "@types/node": "^20",
+        "@types/progress": "^2.0.7"
+    }
+}

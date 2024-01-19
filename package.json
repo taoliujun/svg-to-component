@@ -23,8 +23,8 @@
     "release": "npm exec changeset publish",
     "release:token": "cp -f .npmrc .npmrc.bak && echo \"\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
     "build": "pnpm run -r build",
+    "lint": "pnpm run -r lint",
     "lint:ts": "pnpm run -r lint:ts",
-    "lint": "eslint packages --ext .ts,.js --cache",
     "test": "echo 'test'",
     "prepare": "husky install"
   }
