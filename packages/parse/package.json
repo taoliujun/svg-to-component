@@ -1,0 +1,30 @@
+{
+    "name": "svg-to-component-parse",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "files": [
+        "dist",
+        "/*.md",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "rm -rf ./dist && tsc && npm run build:tpl",
+        "build:tpl": "cp -rf ./src/template ./dist"
+    },
+    "engines": {
+        "node": "^20"
+    },
+    "dependencies": {
+        "fast-xml-parser": "^4.2.2",
+        "lodash": "^4.17.21",
+        "prettier": "^2.8.8",
+        "validate-color": "^2.2.4"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.2",
+        "@types/lodash": "^4.14.195",
+        "@types/node": "^20.2.5",
+        "@types/prettier": "^2.7.3",
+        "@types/react": "^18.2.8"
+    }
+}
