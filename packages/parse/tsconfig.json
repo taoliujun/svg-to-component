@@ -1,0 +1,24 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "lib": [
+            "es2023",
+            "DOM",
+        ],
+        "outDir": "./dist",
+        "declaration": true,
+        // some lints
+        "allowUnusedLabels": false,
+        "allowUnreachableCode": false,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "./src/**/*.ts"
+    ]
+}
