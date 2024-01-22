@@ -12,7 +12,7 @@
     "@changesets/cli": "^2",
     "@commitlint/cli": "^18",
     "@commitlint/config-conventional": "^18",
-    "@taoliujun/eslint-config": "^2.0.1",
+    "@taoliujun/eslint-config": "^2.1.0",
     "husky": "^8",
     "lint-staged": "^15",
     "typescript": "^5"
