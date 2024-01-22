@@ -1,5 +1,6 @@
 module.exports = {
     extends: ['@taoliujun/eslint-config'],
+    parserOptions: { tsconfigRootDir: __dirname },
     overrides: [
         {
             files: ['./src/index.ts'],
