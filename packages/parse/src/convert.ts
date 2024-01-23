@@ -1,13 +1,11 @@
-import { X2jOptions, XMLBuilder, XMLParser, XmlBuilderOptions } from 'fast-xml-parser';
+import type { X2jOptions, XmlBuilderOptions } from 'fast-xml-parser';
+import { XMLBuilder, XMLParser } from 'fast-xml-parser';
 
 type SVGTagNames = keyof SVGElementTagNameMap;
 type SVGAttributes = Record<string, string>;
 type SVGObject = Record<SVGTagNames, SVGObject[]> & {
     ':@'?: SVGAttributes;
 };
-type FormatSVGAttributes = (attributes: SVGAttributes) => SVGAttributes;
-
-const ROOT_KEY = ':@';
 
 // Code string to xml object
 const svgToObj = (content: string, opt?: X2jOptions) => {
@@ -35,5 +33,4 @@ const objToSvg = (obj?: SVGObject[], opt?: XmlBuilderOptions): string => {
     return builder.build(obj);
 };
 
-export { ROOT_KEY, svgToObj, objToSvg };
-export type { SVGObject, SVGAttributes, FormatSVGAttributes };
+export { svgToObj, objToSvg };
