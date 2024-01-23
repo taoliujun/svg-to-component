@@ -1,11 +1,11 @@
 {
   "name": "svg-to-component.preview",
   "version": "0.0.0",
-  "main": "./script/lib/index.js",
   "engines": {
     "node": "^20",
     "pnpm": ">=8"
   },
+  "main": "./script/lib/index.js",
   "scripts": {
     "lint": "eslint --cache src",
     "lint:ts": "tsc --noEmit",
