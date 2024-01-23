@@ -1,17 +1,17 @@
 {
     "name": "svg-to-component.parse",
     "version": "1.0.0",
-    "main": "./dist/index.js",
+    "main": "./lib/index.js",
     "files": [
-        "dist",
+        "lib",
         "/*.md",
         "package.json"
     ],
     "scripts": {
         "lint": "eslint --cache src",
         "lint:ts": "tsc --noEmit",
-        "build": "rm -rf ./dist && tsc && npm run build:tpl",
-        "build:tpl": "cp -rf ./src/template ./dist"
+        "build": "rm -rf ./lib && tsc && npm run build:tpl",
+        "build:tpl": "cp -rf ./src/template ./lib"
     },
     "engines": {
         "node": "^20"

@@ -7,37 +7,7 @@ type SVGObject = Record<SVGTagNames, SVGObject[]> & {
 };
 type FormatSVGAttributes = (attributes: SVGAttributes) => SVGAttributes;
 
-const rootKey = ':@';
-
-// Loop the properties of the SVG
-const organizeSvg = (obj: SVGObject[]) => {
-    if (!obj?.length) {
-        return obj;
-    }
-
-    const newObj = obj.map((v) => {
-        const output: [string, unknown][] = [];
-
-        if (v[rootKey]) {
-            // Handling colors
-            let newValue = v[rootKey];
-
-            output.push([rootKey, newValue]);
-        }
-
-        Object.entries(v)
-            .filter(([key]) => {
-                return key !== rootKey;
-            })
-            .forEach(([key, value]) => {
-                output.push([key, organizeSvg(value as SVGObject[])]);
-            });
-
-        return Object.fromEntries(output);
-    });
-
-    return newObj as typeof obj;
-};
+const ROOT_KEY = ':@';
 
 // Code string to xml object
 const svgToObj = (content: string, opt?: X2jOptions) => {
@@ -49,9 +19,7 @@ const svgToObj = (content: string, opt?: X2jOptions) => {
         ...opt,
     });
 
-    const obj = parser.parse(content) as SVGObject[];
-    const newObj = organizeSvg(obj);
-    return newObj;
+    return parser.parse(content) as SVGObject[];
 };
 
 // XML object to code string
@@ -64,9 +32,8 @@ const objToSvg = (obj?: SVGObject[], opt?: XmlBuilderOptions): string => {
         ...opt,
     });
 
-    const tpl = builder.build(obj);
-    return tpl;
+    return builder.build(obj);
 };
 
-export { rootKey, svgToObj, objToSvg };
+export { ROOT_KEY, svgToObj, objToSvg };
 export type { SVGObject, SVGAttributes, FormatSVGAttributes };

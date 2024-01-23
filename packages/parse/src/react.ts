@@ -57,6 +57,7 @@ const generateReact = (
                 // spread props
                 attrs['props'] = '{...props}';
             }
+            // convert color value to getColor
             if (tagName !== 'mask') {
                 ['fill', 'stroke', 'stop-color', 'flood-color', 'lighting-color'].map((k) => {
                     const value = attrs[k];
@@ -65,7 +66,7 @@ const generateReact = (
                         const index = originColors.length;
 
                         // Reflect.deleteProperty(attrs, k);
-                        Reflect.set(attrs, k, `{getColor(color, ${index}, '${value}')}`);
+                        Reflect.set(attrs, k, `{getColor(color, ${index}, ${value})}`);
 
                         if (isPreview) {
                             Reflect.set(attrs, `data-preview-color-${k}-index`, index);
@@ -74,6 +75,7 @@ const generateReact = (
                     }
                 });
             }
+            // camelCase attrs name
             Object.entries(attrs).forEach(([k, v]) => {
                 if (!k.startsWith('data-')) {
                     Reflect.deleteProperty(attrs, k);
@@ -87,9 +89,10 @@ const generateReact = (
     let code = objToSvg(xmlObj, {});
 
     // spread props
-    code = code.replace(`props="{...props}"`, `{...props}`);
+    code = code.replaceAll(`props="{...props}"`, `{...props}`);
 
-    // TODO inject correct getColor function
+    // inject correct getColor function
+    code = code.replaceAll(/"{getColor\((.+?), (.+?), (.+?)\)}\"/g, `{getColor($1,$2,'$3')}`);
 
     code = generateComponentCode(componentName, code, originColors);
 

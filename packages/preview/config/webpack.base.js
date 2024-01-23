@@ -56,7 +56,7 @@ const generate = (isOptimization = false) => {
         devtool: isOptimization ? false : 'source-map',
         entry: entries,
         output: {
-            path: resolve('dist'),
+            path: resolve('lib'),
             filename: isOptimization ? '[name].[contenthash:8].js' : '[name].bundle.js',
             chunkFilename: isOptimization ? '[name].[contenthash:8].chunk.js' : '[name].chunk.js',
             assetModuleFilename: '[name].[contenthash:8][ext][query]',
@@ -129,17 +129,17 @@ const generate = (isOptimization = false) => {
             minimize: isOptimization,
             minimizer: isOptimization
                 ? [
-                    new TerserPlugin({
-                        parallel: os.cpus().length,
-                        extractComments: false,
-                        terserOptions: {
-                            output: {
-                                comments: false,
-                            },
-                            mangle: true,
-                        },
-                    }),
-                ]
+                      new TerserPlugin({
+                          parallel: os.cpus().length,
+                          extractComments: false,
+                          terserOptions: {
+                              output: {
+                                  comments: false,
+                              },
+                              mangle: true,
+                          },
+                      }),
+                  ]
                 : undefined,
         },
     };

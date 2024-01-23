@@ -32,6 +32,6 @@ console.log(
   </defs>
 </svg>
 `,
-        { isPreview: true },
+        // { isPreview: true },
     ),
 );

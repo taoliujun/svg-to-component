@@ -13,13 +13,13 @@ const config = {
     ...base,
     devServer: {
         static: {
-            directory: resolve('dist'),
+            directory: resolve('lib'),
         },
         compress: true,
         open: true,
         hot: true,
         historyApiFallback: true,
-        port: 9000
+        port: 9000,
     },
     plugins: [...basePlugins, new DotenvWebpackPlugin({ path: resolve('.env') })],
 };

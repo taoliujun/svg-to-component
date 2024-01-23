@@ -17,18 +17,18 @@
         "url": "https://github.com/taoliujun/svg-to-component/issues"
     },
     "files": [
-        "dist",
+        "lib",
         "/*.md",
         "package.json"
     ],
-    "main": "./dist/index.js",
+    "main": "./lib/index.js",
     "bin": {
-        "svg-to-component": "./dist/index.js"
+        "svg-to-component": "./lib/index.js"
     },
     "scripts": {
         "lint": "eslint --cache src",
         "lint:ts": "tsc --noEmit",
-        "build": "rm -rf ./dist && tsc"
+        "build": "rm -rf ./lib && tsc"
     },
     "engines": {
         "node": "^20"

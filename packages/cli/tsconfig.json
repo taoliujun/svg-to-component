@@ -1,7 +1,7 @@
 {
     "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
-        "outDir": "./dist",
+        "outDir": "./lib",
         "declaration": true,
         // some lints
         "allowUnusedLabels": false,
@@ -12,7 +12,7 @@
     },
     "exclude": [
         "node_modules",
-        "dist"
+        "lib"
     ],
     "include": [
         "./src/**/*.ts"

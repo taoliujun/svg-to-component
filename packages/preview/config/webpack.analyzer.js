@@ -15,7 +15,7 @@ const config = {
     ...base,
     devServer: {
         static: {
-            directory: resolve('dist'),
+            directory: resolve('lib'),
         },
         compress: true,
         host: 'local-ipv4',
