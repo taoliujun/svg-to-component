@@ -1,17 +1,5 @@
-import {
-    CSSProperties,
-    ContextType,
-    Dispatch,
-    FC,
-    SetStateAction,
-    createContext,
-    useCallback,
-    useContext,
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-} from 'react';
+import type { CSSProperties, ContextType, Dispatch, FC, SetStateAction } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { ColorPicker } from '../ColorPicker';
 import { usePageStoreContext } from '../PageStore';
 
@@ -21,7 +9,7 @@ const StoreContext = createContext(
         dispatchStyles: (input: CSSProperties) => void;
         boxBackground: string;
         dispatchBoxBackground: Dispatch<SetStateAction<string>>;
-    }
+    },
 );
 
 type StoreType = ContextType<typeof StoreContext>;
@@ -110,13 +98,13 @@ export const Preview: FC = () => {
 
     return (
         <StoreContext.Provider value={{ styles, dispatchStyles, boxBackground, dispatchBoxBackground }}>
-            <div className="h-full w-full flex flex-col">
-                <div className="flex items-center gap-x-2 h-12 bg-black/5 px-2">
+            <div className="flex h-full w-full flex-col">
+                <div className="flex h-12 items-center gap-x-2 bg-black/5 px-2">
                     <FontSize />
                     <Background />
                 </div>
                 <div
-                    className="flex-1 flex items-center justify-center overflow-auto"
+                    className="flex flex-1 items-center justify-center overflow-auto"
                     style={{
                         background: boxBackground,
                     }}

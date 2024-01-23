@@ -1,15 +1,5 @@
-import {
-    ContextType,
-    Dispatch,
-    FC,
-    PropsWithChildren,
-    SVGAttributes,
-    SetStateAction,
-    createContext,
-    useCallback,
-    useContext,
-    useState,
-} from 'react';
+import type { ContextType, Dispatch, FC, PropsWithChildren, SVGAttributes, SetStateAction } from 'react';
+import { createContext, useCallback, useContext, useState } from 'react';
 
 interface SVGProps {
     color?: string | string[];
@@ -26,7 +16,7 @@ const PageStoreContext = createContext(
         dispatchSvgProps: (input: Partial<SVGProps>) => void;
         svgElement: HTMLElement | null;
         dispatchSvgElement: Dispatch<SetStateAction<HTMLElement | null>>;
-    }
+    },
 );
 
 type PageStoreType = ContextType<typeof PageStoreContext>;

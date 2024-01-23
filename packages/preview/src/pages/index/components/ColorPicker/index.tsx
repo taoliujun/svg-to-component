@@ -1,5 +1,6 @@
 import { useBoolean, useClickAway } from 'ahooks';
-import { ButtonHTMLAttributes, FC, forwardRef, useEffect, useRef } from 'react';
+import type { ButtonHTMLAttributes, FC } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import { SketchPicker } from 'react-color';
 
 interface Props {
@@ -13,7 +14,7 @@ const ColorButton = forwardRef<HTMLButtonElement, Pick<Props, 'color'> & ButtonH
     ({ color, ...props }, ref) => {
         return (
             <button
-                className="w-6 h-6 outline-none border"
+                className="h-6 w-6 border outline-none"
                 style={{
                     background: color,
                 }}
@@ -21,7 +22,7 @@ const ColorButton = forwardRef<HTMLButtonElement, Pick<Props, 'color'> & ButtonH
                 ref={ref}
             />
         );
-    }
+    },
 );
 
 const Picker = forwardRef<HTMLDivElement, Pick<Props, 'color' | 'onChange'>>(({ color, onChange }, ref) => {

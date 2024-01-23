@@ -1,18 +1,23 @@
 {
-    "extends": "@tsconfig/create-react-app/tsconfig.json",
-    "compilerOptions": {
-        "target": "ES2022",
-        "paths": {
-            "@/*": [
-                "./src/*"
-            ]
-        }
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
     },
-    "exclude": [
-        "node_modules",
-        "lib"
+    "types": [
+      "webpack-env",
     ],
-    "include": [
-        "src"
-    ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "src/**/*",
+    "config/**/*"
+  ],
 }

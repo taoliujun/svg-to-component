@@ -1,8 +1,10 @@
-import { FC, useMemo, useRef, useState } from 'react';
+import type { FC } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { ActiveMask } from './components/ActiveMask';
 import { ColorControl } from './components/ColorControl';
 import { Mode } from './components/Mode';
-import { ModeEnum, StoreContext, StoreType } from './components/Store';
+import type { StoreType } from './components/Store';
+import { ModeEnum, StoreContext } from './components/Store';
 
 export const Colors: FC = () => {
     const [singColors, dispatchSingColors] = useState<StoreType['singColors']>([]);

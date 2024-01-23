@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { PanelGroup, Panel, PanelResizeHandle } from 'react-resizable-panels';
 import { Code } from './components/Code';
 import { Colors } from './components/Colors';
@@ -9,7 +9,7 @@ import { SvgList } from './components/SvgList';
 
 const Main: FC = () => {
     return (
-        <main className="flex flex-col h-screen">
+        <main className="flex h-screen flex-col">
             <Header />
             <PanelGroup className="flex-1" direction="horizontal" autoSaveId="index">
                 <Panel defaultSizePercentage={50}>
@@ -44,4 +44,4 @@ const App: FC = () => {
     );
 };
 
-export { App };
+export default App;

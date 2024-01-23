@@ -1,5 +1,3 @@
-//
-
 import path from 'path';
 
 const packagePath = path.resolve(__dirname, '../..');
