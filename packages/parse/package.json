@@ -1,6 +1,9 @@
 {
     "name": "svg-to-component.parse",
     "version": "0.0.0",
+    "engines": {
+        "node": "^20"
+    },
     "main": "./lib/index.js",
     "files": [
         "lib",
@@ -12,9 +15,6 @@
         "lint:ts": "tsc --noEmit",
         "build": "rm -rf ./lib && tsc && npm run build:tpl",
         "build:tpl": "cp -rf ./src/template ./lib"
-    },
-    "engines": {
-        "node": "^20"
     },
     "dependencies": {
         "fast-xml-parser": "^4.2.2",

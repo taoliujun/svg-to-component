@@ -16,6 +16,9 @@
     "bugs": {
         "url": "https://github.com/taoliujun/svg-to-component/issues"
     },
+    "engines": {
+        "node": "^20"
+    },
     "files": [
         "lib",
         "/*.md",
@@ -29,9 +32,6 @@
         "lint": "eslint --cache src",
         "lint:ts": "tsc --noEmit",
         "build": "rm -rf ./lib && tsc"
-    },
-    "engines": {
-        "node": "^20"
     },
     "dependencies": {
         "chalk": "^4.1.2",
