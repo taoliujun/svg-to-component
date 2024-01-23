@@ -1,4 +1,5 @@
-import { FC, useMemo } from 'react';
+import type { FC } from 'react';
+import { useMemo } from 'react';
 import { ModeEnum, useStoreContext } from '../Store';
 
 export const Mode: FC = () => {
@@ -16,10 +17,10 @@ export const Mode: FC = () => {
     }, []);
 
     return (
-        <div className="flex items-center p-2 gap-4">
+        <div className="flex items-center gap-4 p-2">
             {modes.map((v) => {
                 return (
-                    <label key={v.value} className="label cursor-pointer inline-flex items-center">
+                    <label key={v.value} className="label inline-flex cursor-pointer items-center">
                         <input
                             type="radio"
                             name="mode"

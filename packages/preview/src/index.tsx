@@ -1,5 +1,5 @@
+import '@/service/polyfill';
 import { createRoot } from 'react-dom/client';
-import { App } from './pages/index';
+import { App } from './app';
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
-root.render(<App />);
+createRoot(document.querySelector('#root') as Element).render(<App />);

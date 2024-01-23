@@ -1,12 +1,5 @@
-import {
-    CSSProperties,
-    ContextType,
-    Dispatch,
-    MutableRefObject,
-    SetStateAction,
-    createContext,
-    useContext,
-} from 'react';
+import type { CSSProperties, ContextType, Dispatch, MutableRefObject, SetStateAction } from 'react';
+import { createContext, useContext } from 'react';
 
 export enum ModeEnum {
     SINGLE,
@@ -34,7 +27,7 @@ export const StoreContext = createContext(
 
         maskStyles: CSSProperties[];
         dispatchMaskStyles: Dispatch<SetStateAction<CSSProperties[]>>;
-    }
+    },
 );
 
 export type StoreType = ContextType<typeof StoreContext>;

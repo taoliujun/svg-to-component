@@ -1,5 +1,6 @@
 import { useBoolean, useTimeout } from 'ahooks';
-import { FC, useMemo } from 'react';
+import type { FC } from 'react';
+import { useMemo } from 'react';
 import { usePageStoreContext } from '../PageStore';
 
 const CopySuccess: FC<{ onHide?: () => void }> = ({ onHide }) => {

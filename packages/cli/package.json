@@ -43,6 +43,7 @@
         "svg-to-component.preview": "workspace:^"
     },
     "devDependencies": {
+        "@taoliujun/eslint-config": "^2.1.0",
         "@tsconfig/node20": "^20.1.2",
         "@types/lodash": "^4.14.195",
         "@types/node": "^20",

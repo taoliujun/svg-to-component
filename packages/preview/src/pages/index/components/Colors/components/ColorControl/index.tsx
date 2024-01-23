@@ -1,5 +1,6 @@
 import { clone } from 'lodash';
-import { FC, useCallback, useEffect, useMemo, useRef } from 'react';
+import type { FC } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { ColorPicker } from '../../../ColorPicker';
 import { usePageStoreContext } from '../../../PageStore';
 import { useStoreContext } from '../Store';
@@ -63,7 +64,7 @@ const useResetColors = () => {
                     }
                 });
                 return [currentKey, indexes];
-            })
+            }),
         );
 
         groupColorsIndexMap.current = maps;
@@ -110,7 +111,7 @@ const useActiveElement = () => {
                     return multiElements.current[v + 1];
                 });
                 return [groupIndex, elements];
-            })
+            }),
         );
     }, [groupColorsIndexMap, svgElement]);
 
@@ -147,7 +148,7 @@ const useActiveElement = () => {
 
             dispatchMaskStyles(styles);
         },
-        [dispatchMaskStyles, isGroup, isMulti, isSingle, svgElement]
+        [dispatchMaskStyles, isGroup, isMulti, isSingle, svgElement],
     );
 
     const hideActiveElement = useCallback(() => {
@@ -222,7 +223,7 @@ const useChangeColors = () => {
             isMulti,
             isSingle,
             multiColors,
-        ]
+        ],
     );
 
     return { onChangeColors };
@@ -237,7 +238,7 @@ export const ColorControl: FC = () => {
     const { showActiveElement, hideActiveElement } = useActiveElement();
 
     return (
-        <div className="flex items-center p-2 gap-2">
+        <div className="flex items-center gap-2 p-2">
             {allColors.map((v, k) => {
                 return (
                     <div

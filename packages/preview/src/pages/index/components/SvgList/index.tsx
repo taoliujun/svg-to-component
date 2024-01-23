@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { FC, Suspense, useEffect } from 'react';
+import type { FC } from 'react';
+import { Suspense, useEffect } from 'react';
 import { usePageStoreContext } from '../PageStore';
 
 const components = require.context('@/svgComponents/', true, /\w+\/index\.tsx/, 'sync');
@@ -24,7 +25,7 @@ export const SvgList: FC = () => {
 
     return (
         <Suspense fallback={<div />}>
-            <div className="flex h-full flex-wrap content-start overflow-auto bg-black/10 gap-x-1">
+            <div className="flex h-full flex-wrap content-start gap-x-1 overflow-auto bg-black/10">
                 {files.map((v) => {
                     const CurrentIcon = v.component;
                     const name = v.path;
@@ -34,16 +35,16 @@ export const SvgList: FC = () => {
                             key={name}
                             className={classNames(
                                 'w-[160px] py-4 text-center',
-                                CurrentIcon === svgComponent?.component && 'bg-black/5'
+                                CurrentIcon === svgComponent?.component && 'bg-black/5',
                             )}
                         >
                             <button
-                                className="w-full h-10 flex items-center justify-center"
+                                className="flex h-10 w-full items-center justify-center"
                                 onClick={() => {
                                     dispatchSvgComponent({ name, component: CurrentIcon });
                                 }}
                             >
-                                <CurrentIcon className="text-gray-600 text-4xl" />
+                                <CurrentIcon className="text-4xl text-gray-600" />
                             </button>
                             <p className="mt-2">{name}</p>
                         </div>
