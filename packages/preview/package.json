@@ -1,6 +1,6 @@
 {
     "name": "svg-to-component.preview",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "main": "./script/lib/index.js",
     "scripts": {
         "lint": "eslint --cache src",
