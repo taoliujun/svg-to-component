@@ -55,11 +55,11 @@ const generateReact = (
                 Reflect.set(attrs, 'width', '1em');
 
                 // spread props
-                attrs['props'] = '{...props}';
+                Reflect.set(attrs, 'props', '{...props}');
             }
             // convert color value to getColor
             if (tagName !== 'mask') {
-                ['fill', 'stroke', 'stop-color', 'flood-color', 'lighting-color'].map((k) => {
+                ['fill', 'stroke', 'stop-color', 'flood-color', 'lighting-color'].forEach((k) => {
                     const value = attrs[k];
                     if (value) {
                         originColors.push(value);
@@ -92,7 +92,7 @@ const generateReact = (
     code = code.replaceAll(`props="{...props}"`, `{...props}`);
 
     // inject correct getColor function
-    code = code.replaceAll(/"{getColor\((.+?), (.+?), (.+?)\)}\"/g, `{getColor($1,$2,'$3')}`);
+    code = code.replaceAll(/"{getColor\((.+?), (.+?), (.+?)\)}"/g, `{getColor($1,$2,'$3')}`);
 
     code = generateComponentCode(componentName, code, originColors);
 
