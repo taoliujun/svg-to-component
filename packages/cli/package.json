@@ -1,6 +1,6 @@
 {
     "name": "svg-to-component",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "parse svg files into react components, support dynamic colors and preview.",
     "keywords": [
         "svg",
