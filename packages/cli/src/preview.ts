@@ -2,6 +2,7 @@ import path from 'path';
 import { Command } from 'commander';
 import { packagePath as previewPackagePath, componentsPath } from 'svg-to-component-preview';
 import { spawn } from 'child_process';
+import fs from 'fs';
 import { log, outputMain } from './log';
 import { generateComponentFiles } from './parse';
 
@@ -12,6 +13,9 @@ const program = new Command('preview')
     .argument('path <string>', 'the directory of the SVG files')
     .option('--debug', 'output the debug log')
     .action(async (args, opts) => {
+        fs.rmSync(componentsPath, { recursive: true, force: true });
+        fs.mkdirSync(componentsPath);
+
         await generateComponentFiles({
             sourcePath: path.resolve(cwdPath, args),
             outputPath: componentsPath,
