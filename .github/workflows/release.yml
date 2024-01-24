@@ -29,3 +29,6 @@ jobs:
             - name: release
               run: |
                   NPM_TOKEN=${{secrets.NPM_TOKEN}} pnpm run release:token
+
+            - name: push tags
+              run: git push --tags
