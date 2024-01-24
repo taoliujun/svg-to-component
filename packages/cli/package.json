@@ -1,5 +1,5 @@
 {
-    "name": "svg-to-component",
+    "name": "svg-to-component-cli",
     "version": "1.0.0",
     "description": "parse svg files into react components, support dynamic colors and preview.",
     "keywords": [
@@ -39,8 +39,8 @@
         "fast-glob": "^3.3.2",
         "lodash": "^4.17.21",
         "progress": "^2.0.3",
-        "svg-to-component.parse": "workspace:^",
-        "svg-to-component.preview": "workspace:^"
+        "svg-to-component-parse": "workspace:^",
+        "svg-to-component-preview": "workspace:^"
     },
     "devDependencies": {
         "@taoliujun/eslint-config": "^2.1.0",

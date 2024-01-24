@@ -1,5 +1,5 @@
 {
-    "name": "svg-to-component.parse",
+    "name": "svg-to-component-parse",
     "version": "1.0.0",
     "engines": {
         "node": "^20"

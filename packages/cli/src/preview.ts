@@ -1,6 +1,6 @@
 import path from 'path';
 import { Command } from 'commander';
-import { packagePath as previewPackagePath, componentsPath } from 'svg-to-component.preview';
+import { packagePath as previewPackagePath, componentsPath } from 'svg-to-component-preview';
 import { spawn } from 'child_process';
 import { log, outputMain } from './log';
 import { generateComponentFiles } from './parse';

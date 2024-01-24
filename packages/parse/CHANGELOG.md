@@ -1,4 +1,4 @@
-# svg-to-component.parse
+# svg-to-component-parse
 
 ## 1.0.0
 

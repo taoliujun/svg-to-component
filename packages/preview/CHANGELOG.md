@@ -1,4 +1,4 @@
-# svg-to-component.preview
+# svg-to-component-preview
 
 ## 1.0.0
 

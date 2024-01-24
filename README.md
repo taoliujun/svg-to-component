@@ -1,4 +1,4 @@
-# svg-to-component
+# develop
 
 It is a pnpm monorepo repo.
 

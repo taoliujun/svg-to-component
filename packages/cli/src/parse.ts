@@ -4,7 +4,7 @@ import { glob } from 'fast-glob';
 import { Command } from 'commander';
 import Progress from 'progress';
 import { camelCase, upperFirst } from 'lodash';
-import { generateReact, generateComponentUtils } from 'svg-to-component.parse';
+import { generateReact, generateComponentUtils } from 'svg-to-component-parse';
 import { log, outputMain, outputSecond, outputSuccess } from './log';
 
 const cwdPath = path.resolve();

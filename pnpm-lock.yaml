@@ -50,10 +50,10 @@ importers:
       progress:
         specifier: ^2.0.3
         version: 2.0.3
-      svg-to-component.parse:
+      svg-to-component-parse:
         specifier: workspace:^
         version: link:../parse
-      svg-to-component.preview:
+      svg-to-component-preview:
         specifier: workspace:^
         version: link:../preview
     devDependencies:
