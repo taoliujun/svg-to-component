@@ -12,8 +12,9 @@
     "lint:ts": "tsc --noEmit",
     "clean": "rm -rf lib/",
     "start": "NODE_ENV=development NODE_OPTIONS='--loader ts-node/esm' webpack serve --config ./config/webpack.config.ts --progress",
-    "build": "pnpm run build:script",
-    "build:script": "cd script && tsc"
+    "build": "pnpm run build:script && build:md",
+    "build:script": "cd script && tsc",
+    "build:md": "cp -f ./README.zh_CN.md ./README.md"
   },
   "dependencies": {
     "@babel/core": "^7.22.10",

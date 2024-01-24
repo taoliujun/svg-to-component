@@ -31,7 +31,8 @@
     "scripts": {
         "lint": "eslint --cache src",
         "lint:ts": "tsc --noEmit",
-        "build": "rm -rf ./lib && tsc"
+        "build": "rm -rf ./lib && tsc && pnpm run build:md",
+        "build:md": "cp -f ./README.zh_CN.md ./README.md"
     },
     "dependencies": {
         "chalk": "^4.1.2",

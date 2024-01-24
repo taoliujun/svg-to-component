@@ -14,8 +14,9 @@
     "scripts": {
         "lint": "eslint --cache src",
         "lint:ts": "tsc --noEmit",
-        "build": "rm -rf ./lib && tsc && npm run build:tpl",
-        "build:tpl": "cp -rf ./src/template ./lib"
+        "build": "rm -rf ./lib && tsc && pnpm run build:tpl && pnpm run build:md",
+        "build:tpl": "cp -rf ./src/template ./lib",
+        "build:md": "cp -f ./README.zh_CN.md ./README.md"
     },
     "dependencies": {
         "fast-xml-parser": "^4.2.2",
