@@ -19,9 +19,6 @@ jobs:
               with:
                   node-version: 20
                   cache: 'pnpm'
-                  cache-dependency-path: |
-                      src/pnpm-lock.yaml
-                      .github/actions/issue-to-hexo/pnpm-lock.yaml
 
             - name: install dependencies
               run: pnpm install
