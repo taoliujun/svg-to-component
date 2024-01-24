@@ -1,9 +1,9 @@
 import path from 'path';
 import { Command } from 'commander';
 import { packagePath as previewPackagePath, componentsPath } from 'svg-to-component.preview';
+import { spawn } from 'child_process';
 import { log, outputMain } from './log';
 import { generateComponentFiles } from './parse';
-import { spawn } from 'child_process';
 
 const cwdPath = path.resolve();
 
@@ -22,7 +22,7 @@ const program = new Command('preview')
 
         log(outputMain(`> run ${previewPackagePath} server...`));
 
-        const wp = spawn(`pnpm`, ['run', 'dev'], {
+        const wp = spawn(`pnpm`, ['run', 'start'], {
             cwd: previewPackagePath,
             stdio: 'inherit',
         });

@@ -5,7 +5,7 @@ import pkg from '../package.json';
 
 const program = new Command();
 
-program.name('svg-to-component').description('svg file parse and preview.').version(pkg.version);
+program.name(pkg.name).description(pkg.description).version(pkg.version);
 program.addCommand(commandParse);
 program.addCommand(commandPreview);
 
