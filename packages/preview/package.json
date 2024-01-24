@@ -58,7 +58,7 @@
     "webpack-plugin-noop-ts": "^2.1.6"
   },
   "devDependencies": {
-    "@taoliujun/eslint-config": "^1.5.1",
+    "@taoliujun/eslint-config": "^2.1.0",
     "@types/lodash": "^4.14.195",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.8",

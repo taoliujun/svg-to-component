@@ -35,7 +35,7 @@ const generateComponentCode = (componentName: string, content: string, colors: s
 };
 
 // To React
-const generateReact = (
+const generateReact = async (
     componentName: string,
     content: string,
     opts?: {
@@ -96,7 +96,7 @@ const generateReact = (
 
     code = generateComponentCode(componentName, code, originColors);
 
-    code = prettierFormat(code, {
+    code = await prettierFormat(code, {
         printWidth: 120,
         tabWidth: 4,
         semi: true,
