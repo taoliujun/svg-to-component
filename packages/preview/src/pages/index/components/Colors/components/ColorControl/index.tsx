@@ -136,7 +136,7 @@ const useActiveElement = () => {
             const styles = findElement
                 .filter((v) => Boolean(v))
                 .map((v) => {
-                    const { width, height, left, top } = v.getBoundingClientRect();
+                    const { width, height, left, top } = (v as HTMLElement).getBoundingClientRect();
                     return {
                         width: `${width}px`,
                         height: `${height}px`,
