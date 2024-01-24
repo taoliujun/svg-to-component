@@ -6,6 +6,7 @@
     "pnpm": ">=8"
   },
   "main": "./script/lib/index.js",
+  "types": "./script/lib/index.d.ts",
   "scripts": {
     "lint": "eslint --cache src",
     "lint:ts": "tsc --noEmit",

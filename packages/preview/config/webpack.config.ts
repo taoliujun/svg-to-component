@@ -90,6 +90,7 @@ const webpackConfig = (): Configuration & {
         },
         devServer: {
             ...devServer,
+            open: true,
         },
         devtool: isWebpackDev ? 'eval-source-map' : false,
         module: {

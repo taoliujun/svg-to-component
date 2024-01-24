@@ -1,1 +1,0 @@
-# svg-to-component
