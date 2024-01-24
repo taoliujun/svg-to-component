@@ -1,0 +1,34 @@
+name: release
+run-name: '${{github.workflow}}'
+on: workflow_dispatch
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: init pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+
+            - name: init node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: 'pnpm'
+                  cache-dependency-path: |
+                      src/pnpm-lock.yaml
+                      .github/actions/issue-to-hexo/pnpm-lock.yaml
+
+            - name: install dependencies
+              run: pnpm install
+
+            - name: build
+              run: pnpm run build
+
+            - name: release
+              run: |
+                  NPM_TOKEN=${{secrets.NPM_TOKEN}} pnpm run release:token
