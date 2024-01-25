@@ -3,7 +3,7 @@ import { XMLBuilder, XMLParser } from 'fast-xml-parser';
 
 type SVGTagNames = keyof SVGElementTagNameMap;
 type SVGAttributes = Record<string, string>;
-type SVGObject = Record<SVGTagNames, SVGObject[]> & {
+type SVGObject = Partial<Record<SVGTagNames, SVGObject[]>> & {
     ':@'?: SVGAttributes;
 };
 

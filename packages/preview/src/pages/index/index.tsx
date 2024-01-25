@@ -12,21 +12,21 @@ const Main: FC = () => {
         <main className="flex h-screen flex-col">
             <Header />
             <PanelGroup className="flex-1" direction="horizontal" autoSaveId="index">
-                <Panel defaultSizePercentage={50}>
+                <Panel defaultSize={50}>
                     <SvgList />
                 </Panel>
                 <PanelResizeHandle className="w-1 bg-gray-400" />
-                <Panel defaultSizePercentage={50}>
+                <Panel defaultSize={50}>
                     <PanelGroup direction="vertical" autoSaveId="index/control">
                         <Panel>
                             <Preview />
                         </Panel>
                         <PanelResizeHandle className="h-1 bg-gray-400" />
-                        <Panel defaultSizePixels={200}>
+                        <Panel defaultSize={20}>
                             <Colors />
                         </Panel>
                         <PanelResizeHandle className="h-1 bg-gray-400" />
-                        <Panel defaultSizePixels={200}>
+                        <Panel defaultSize={20}>
                             <Code />
                         </Panel>
                     </PanelGroup>
