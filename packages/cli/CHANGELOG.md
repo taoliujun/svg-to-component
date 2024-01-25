@@ -1,5 +1,14 @@
 # svg-to-component-cli
 
+## 1.1.1
+
+### Patch Changes
+
+-   4153a26: chore: test commit skip ci
+-   Updated dependencies [4153a26]
+    -   svg-to-component-preview@1.1.1
+    -   svg-to-component-parse@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

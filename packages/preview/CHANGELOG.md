@@ -1,5 +1,11 @@
 # svg-to-component-preview
 
+## 1.1.1
+
+### Patch Changes
+
+-   4153a26: chore: test commit skip ci
+
 ## 1.1.0
 
 ### Minor Changes
