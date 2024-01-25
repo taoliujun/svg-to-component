@@ -1,17 +1,23 @@
 # svg-to-component-parse
 
+## 1.1.0
+
+### Minor Changes
+
+-   chore: add jest
+
 ## 1.0.1
 
 ### Patch Changes
 
-- ad944d2: docs: add readme
+-   ad944d2: docs: add readme
 
 ## 1.0.0
 
 ### Major Changes
 
-- 337b0c5: feat: release 1.0
+-   337b0c5: feat: release 1.0
 
 ### Minor Changes
 
-- 688affa: feat: beta1
+-   688affa: feat: beta1
