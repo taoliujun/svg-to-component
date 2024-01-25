@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import { commandParse } from './parse';
 import { commandPreview } from './preview';
-import pkg from '../package.json';
+import pkg from './pkg-info.json';
 
 const program = new Command();
 

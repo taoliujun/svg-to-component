@@ -13,8 +13,12 @@
     "@commitlint/cli": "^18",
     "@commitlint/config-conventional": "^18",
     "@taoliujun/eslint-config": "^2.1.0",
+    "@types/jest": "^29.5.11",
     "husky": "^8",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15",
+    "ts-jest": "^29.1.2",
     "typescript": "^5"
   },
   "scripts": {
@@ -26,7 +30,8 @@
     "build:md": "cp -f ./README.zh_CN.md ./README.md",
     "lint": "pnpm run -r lint",
     "lint:ts": "pnpm run -r lint:ts",
-    "test": "echo 'test'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "pnpm exec jest",
+    "test:coverage": "pnpm exec jest --config=jest.coverage.config.js"
   }
 }

@@ -298,6 +298,26 @@ jobs:
                         `;
                       }
 
+                      output = '';
+                      outerr = '';
+
+                      await exec.exec(
+                        `pnpm run test:coverage`,
+                        [],
+                        {
+                          // silent: true,
+                          ignoreReturnCode: true,
+                          listeners: {
+                            stdout: (data) => {
+                                output += data.toString();
+                            },
+                            stderr: (data) => {
+                                outerr += data.toString();
+                            },
+                          },
+                        }
+                      );
+
                       const errorMatch = outerr.match(/Jest: "global" coverage threshold for lines \([0-9\.]+%\) not met: [0-9\.]+%/);
 
                       if (errorMatch) {

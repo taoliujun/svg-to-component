@@ -15,17 +15,17 @@ const Main: FC = () => {
                 <Panel defaultSizePercentage={50}>
                     <SvgList />
                 </Panel>
-                <PanelResizeHandle className="w-2 bg-neutral-content" />
+                <PanelResizeHandle className="w-1 bg-gray-400" />
                 <Panel defaultSizePercentage={50}>
                     <PanelGroup direction="vertical" autoSaveId="index/control">
                         <Panel>
                             <Preview />
                         </Panel>
-                        <PanelResizeHandle className="h-2 bg-neutral-content" />
+                        <PanelResizeHandle className="h-1 bg-gray-400" />
                         <Panel defaultSizePixels={200}>
                             <Colors />
                         </Panel>
-                        <PanelResizeHandle className="h-2 bg-neutral-content" />
+                        <PanelResizeHandle className="h-1 bg-gray-400" />
                         <Panel defaultSizePixels={200}>
                             <Code />
                         </Panel>

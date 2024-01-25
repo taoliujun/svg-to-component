@@ -12,7 +12,7 @@
         "package.json"
     ],
     "scripts": {
-        "lint": "eslint --cache src",
+        "lint": "eslint src",
         "lint:ts": "tsc --noEmit",
         "build": "rm -rf ./lib && tsc && pnpm run build:tpl && pnpm run build:md",
         "build:tpl": "cp -rf ./src/template ./lib",
@@ -24,7 +24,6 @@
         "prettier": "^3.2.4"
     },
     "devDependencies": {
-        "@taoliujun/eslint-config": "^2.1.0",
         "@tsconfig/node20": "^20.1.2",
         "@types/lodash": "^4.14.195",
         "@types/node": "^20.2.5"
