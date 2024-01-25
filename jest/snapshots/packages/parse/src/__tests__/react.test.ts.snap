@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateReact default: isPreview 1`] = `
+"import type { FC } from 'react';
+import { getColor } from '../utils/helper';
+import type { SVGIconProps } from '../utils/types';
+
+export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
+    return (
+        <svg
+            data-preview-color-fill-index="1"
+            data-preview-color-fill-value="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8 8"
+            fill={getColor(color, 1, 'none')}
+            width="1em"
+            {...props}
+        >
+            <circle
+                data-preview-color-fill-index="2"
+                data-preview-color-fill-value="currentColor"
+                cx="4"
+                cy="4"
+                r="2"
+                fill={getColor(color, 2, 'currentColor')}
+            />
+            <circle
+                data-preview-color-fill-index="3"
+                data-preview-color-fill-value="currentColor"
+                cx="4"
+                cy="4"
+                r="4"
+                fill={getColor(color, 3, 'currentColor')}
+                fillOpacity="0.4"
+            />
+        </svg>
+    );
+};
+Test1.defaultProps = {
+    color: ['none', 'currentColor', 'currentColor'],
+};
+"
+`;
+
+exports[`generateReact default: normal 1`] = `
+"import type { FC } from 'react';
+import { getColor } from '../utils/helper';
+import type { SVGIconProps } from '../utils/types';
+
+export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8 8"
+            fill={getColor(color, 1, 'none')}
+            width="1em"
+            {...props}
+        >
+            <circle cx="4" cy="4" r="2" fill={getColor(color, 2, 'currentColor')} />
+            <circle cx="4" cy="4" r="4" fill={getColor(color, 3, 'currentColor')} fillOpacity="0.4" />
+        </svg>
+    );
+};
+Test1.defaultProps = {
+    color: ['none', 'currentColor', 'currentColor'],
+};
+"
+`;

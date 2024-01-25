@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`log outputMain: outputMain 1`] = `"[37mhello[39m"`;
+
+exports[`log outputMain: outputSecond 1`] = `"[90mhello[39m"`;
+
+exports[`log outputMain: outputSuccess 1`] = `"[32mhello[39m"`;

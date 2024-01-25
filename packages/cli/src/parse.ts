@@ -48,7 +48,7 @@ const generateComponentFiles = async (opts: GenerateParams) => {
 
     const bar = new Progress(':bar :percent ', { total: filesLen });
 
-    files.forEach(async (inputFile, index) => {
+    await files.forEach(async (inputFile, index) => {
         const fileInfo = path.parse(inputFile);
         const relativePath = fileInfo.dir.replace(sourcePath, '');
         const content = fs.readFileSync(inputFile, 'utf-8');

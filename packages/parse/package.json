@@ -14,6 +14,8 @@
     "scripts": {
         "lint": "eslint src",
         "lint:ts": "tsc --noEmit",
+        "test": "pnpm jest",
+        "test:coverage": "pnpm jest --config=jest.coverage.config.js",
         "build": "rm -rf ./lib && tsc && pnpm run build:tpl && pnpm run build:md",
         "build:tpl": "cp -rf ./src/template ./lib",
         "build:md": "cp -f ./README.zh_CN.md ./README.md"
@@ -21,11 +23,12 @@
     "dependencies": {
         "fast-xml-parser": "^4.2.2",
         "lodash": "^4.17.21",
-        "prettier": "^3.2.4"
+        "prettier": "^2.8.8"
     },
     "devDependencies": {
         "@tsconfig/node20": "^20.1.2",
         "@types/lodash": "^4.14.195",
-        "@types/node": "^20.2.5"
+        "@types/node": "^20.2.5",
+        "@types/prettier": "^2.7.3"
     }
 }
