@@ -1,5 +1,17 @@
 # svg-to-component-preview
 
+## 1.1.3
+
+### Patch Changes
+
+-   35486e7: fix: error files in package.json
+
+## 1.1.2
+
+### Patch Changes
+
+-   1c6556c: fix: empty main
+
 ## 1.1.1
 
 ### Patch Changes

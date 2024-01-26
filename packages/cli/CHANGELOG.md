@@ -1,5 +1,19 @@
 # svg-to-component-cli
 
+## 1.1.3
+
+### Patch Changes
+
+-   Updated dependencies [35486e7]
+    -   svg-to-component-preview@1.1.3
+
+## 1.1.2
+
+### Patch Changes
+
+-   Updated dependencies [1c6556c]
+    -   svg-to-component-preview@1.1.2
+
 ## 1.1.1
 
 ### Patch Changes
