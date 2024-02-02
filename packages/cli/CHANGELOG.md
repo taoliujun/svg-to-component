@@ -1,5 +1,11 @@
 # svg-to-component-cli
 
+## 1.2.2
+
+### Patch Changes
+
+-   fdd9ffd: fix: improve content
+
 ## 1.2.1
 
 ### Patch Changes
