@@ -23,7 +23,7 @@ const program = new Command('preview')
                 //
                 log(
                     outputError(
-                        `The package "svg-to-component-preview" is optional, install it first:\n`,
+                        `The package "svg-to-component-preview" is optional but not been installed, install it first:\n`,
                         `1. npm install svg-to-component-preview`,
                     ),
                 );
