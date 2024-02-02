@@ -1,5 +1,11 @@
 # svg-to-component-cli
 
+## 1.3.0
+
+### Minor Changes
+
+-   177f9fa: chore: change dependencies
+
 ## 1.2.2
 
 ### Patch Changes
