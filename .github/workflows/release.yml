@@ -23,6 +23,9 @@ jobs:
             - name: install dependencies
               run: pnpm install
 
+            - name: new version
+              run: pnpm run version
+
             - name: build
               run: pnpm run build
 
@@ -30,5 +33,10 @@ jobs:
               run: |
                   NPM_TOKEN=${{secrets.NPM_TOKEN}} pnpm run release:token
 
-            - name: push tags
-              run: git push --tags
+            - name: commit
+              run: |
+                  git add .
+                  git commit -m "RELEASE: new version [skip ci]"
+
+            - name: push
+              run: git push && git push --tags
