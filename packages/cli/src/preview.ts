@@ -1,9 +1,8 @@
 import path from 'path';
 import { Command } from 'commander';
-import { packagePath as previewPackagePath, componentsPath } from 'svg-to-component-preview';
 import { spawn } from 'child_process';
 import fs from 'fs';
-import { log, outputMain } from './log';
+import { log, outputError, outputMain } from './log';
 import { generateComponentFiles } from './parse';
 
 const cwdPath = path.resolve();
@@ -13,6 +12,25 @@ const program = new Command('preview')
     .argument('path <string>', 'the directory of the SVG files')
     .option('--debug', 'output the debug log')
     .action(async (args, opts) => {
+        let previewPackagePath: string = '';
+        let componentsPath: string = '';
+        try {
+            const previewPkg = await import('svg-to-component-preview');
+            previewPackagePath = previewPkg.packagePath;
+            componentsPath = previewPkg.componentsPath;
+        } catch (e) {
+            if ((e as NodeJS.ErrnoException).code === 'ERR_MODULE_NOT_FOUND') {
+                //
+                log(
+                    outputError(
+                        `The package "svg-to-component-preview" is optional, install it first:\n`,
+                        `1. npm install svg-to-component-preview`,
+                    ),
+                );
+            }
+            return;
+        }
+
         fs.rmSync(componentsPath, { recursive: true, force: true });
         fs.mkdirSync(componentsPath);
 
