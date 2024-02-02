@@ -1,5 +1,11 @@
 # svg-to-component-cli
 
+## 1.2.0
+
+### Minor Changes
+
+-   2691c2e: make the preview package optional
+
 ## 1.1.3
 
 ### Patch Changes
