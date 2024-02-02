@@ -25,7 +25,7 @@
     "changelog": "npm exec changeset add",
     "version": "npm exec changeset version",
     "release": "npm exec changeset publish",
-    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
+    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\nregistry=https://registry.npmjs.org\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
     "build": "pnpm run -r build && pnpm run build:md",
     "build:md": "cp -f ./README.zh_CN.md ./README.md",
     "lint": "pnpm run -r lint",
