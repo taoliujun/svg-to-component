@@ -35,6 +35,8 @@ jobs:
 
             - name: commit
               run: |
+                  git config user.name "Github Actions"
+                  git config user.email "github.actions@github.com"
                   git add .
                   git commit -m "RELEASE: new version [skip ci]"
 
