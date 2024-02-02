@@ -65,6 +65,9 @@ importers:
       svg-to-component-parse:
         specifier: workspace:^
         version: link:../parse
+      svg-to-component-preview:
+        specifier: workspace:^
+        version: link:../preview
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.2
@@ -78,9 +81,6 @@ importers:
       '@types/progress':
         specifier: ^2.0.7
         version: 2.0.7
-      svg-to-component-preview:
-        specifier: workspace:^
-        version: link:../preview
 
   packages/parse:
     dependencies:
