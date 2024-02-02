@@ -6,24 +6,6 @@
 
 -   177f9fa: chore: change dependencies
 
-## 1.2.2
-
-### Patch Changes
-
--   fdd9ffd: fix: improve content
-
-## 1.2.1
-
-### Patch Changes
-
--   2775fd4: fix: improve content
-
-## 1.2.0
-
-### Minor Changes
-
--   2691c2e: make the preview package optional
-
 ## 1.1.3
 
 ### Patch Changes
