@@ -161,7 +161,7 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2
       classnames:
-        specifier: ^2.3.2
+        specifier: ^2.5.1
         version: 2.5.1
       core-js:
         specifier: ^3.32.0
