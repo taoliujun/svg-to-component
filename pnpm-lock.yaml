@@ -27,7 +27,7 @@ importers:
         specifier: ^29.5.11
         version: 29.5.11
       husky:
-        specifier: ^8
+        specifier: ^8.0.3
         version: 8.0.3
       jest:
         specifier: ^29.7.0
