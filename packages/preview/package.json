@@ -23,7 +23,7 @@
     "build:md": "cp -f ./README.zh_CN.md ./README.md"
   },
   "dependencies": {
-    "@babel/core": "^7.22.10",
+    "@babel/core": "^7.23.9",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@tsconfig/create-react-app": "^2.0.1",
     "@tsconfig/node20": "^20.1.2",
