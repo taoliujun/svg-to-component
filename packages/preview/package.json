@@ -39,7 +39,7 @@
     "css-minimizer-webpack-plugin": "^5.0.1",
     "html-webpack-plugin": "^5.5.1",
     "less": "^4.2.0",
-    "less-loader": "^11.1.3",
+    "less-loader": "^12.2.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.24",
