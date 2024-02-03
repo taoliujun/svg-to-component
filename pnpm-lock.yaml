@@ -164,7 +164,7 @@ importers:
         specifier: ^2.3.2
         version: 2.5.1
       core-js:
-        specifier: ^3.32.0
+        specifier: ^3.35.1
         version: 3.35.1
       css-loader:
         specifier: ^6.8.1
