@@ -27,7 +27,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@tsconfig/create-react-app": "^2.0.1",
     "@tsconfig/node20": "^20.1.2",
-    "@umijs/babel-preset-umi": "^4.0.75",
+    "@umijs/babel-preset-umi": "^4.1.1",
     "ahooks": "^3.7.8",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
