@@ -131,7 +131,7 @@ importers:
         specifier: ^18.2.8
         version: 18.2.48
       '@types/react-color':
-        specifier: ^3.0.6
+        specifier: ^3.0.11
         version: 3.0.11
       '@types/react-dom':
         specifier: ^18.2.4
