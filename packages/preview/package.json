@@ -29,7 +29,7 @@
     "@tsconfig/node20": "^20.1.2",
     "@umijs/babel-preset-umi": "^4.0.75",
     "ahooks": "^3.7.8",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.17",
     "babel-loader": "^9.1.2",
     "babel-preset-react-app": "^10.0.1",
     "chalk": "^4.1.2",
