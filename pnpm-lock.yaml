@@ -113,7 +113,7 @@ importers:
         specifier: ^7.22.10
         version: 7.23.7
       '@pmmmwh/react-refresh-webpack-plugin':
-        specifier: ^0.5.10
+        specifier: ^0.5.11
         version: 0.5.11(@types/webpack@5.28.5)(react-refresh@0.14.0)(webpack-dev-server@4.15.1)(webpack@5.89.0)
       '@tsconfig/create-react-app':
         specifier: ^2.0.1
