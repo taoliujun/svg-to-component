@@ -221,7 +221,7 @@ importers:
         specifier: ^6.15.0
         version: 6.21.3(react-dom@18.2.0)(react@18.2.0)
       style-loader:
-        specifier: ^3.3.3
+        specifier: ^3.3.4
         version: 3.3.4(webpack@5.89.0)
       tailwindcss:
         specifier: ^3.3.2
