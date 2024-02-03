@@ -9,7 +9,7 @@
   ],
   "devDependencies": {
     "@changesets/changelog-git": "^0.2.0",
-    "@changesets/cli": "^2",
+    "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^18",
     "@commitlint/config-conventional": "^18",
     "@taoliujun/eslint-config": "^2.1.0",
