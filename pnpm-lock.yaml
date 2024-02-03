@@ -194,7 +194,7 @@ importers:
         specifier: ^7.3.2
         version: 7.3.4(postcss@8.4.33)(typescript@5.3.3)(webpack@5.89.0)
       postcss-preset-env:
-        specifier: ^9.1.1
+        specifier: ^9.3.0
         version: 9.3.0(postcss@8.4.33)
       postcss-px-to-viewport:
         specifier: ^1.1.1
