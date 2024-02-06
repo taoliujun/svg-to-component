@@ -1,3 +1,7 @@
+const path = require('path');
+
+const PROJECT_PATH = path.resolve(__dirname);
+
 module.exports = {
     root: true,
     extends: ['@taoliujun/eslint-config/react'],
@@ -7,7 +11,7 @@ module.exports = {
         'import/no-extraneous-dependencies': [
             'error',
             {
-                devDependencies: ['/config/**/*'],
+                devDependencies: [path.resolve(PROJECT_PATH, './config/**/*')],
             },
         ],
         'react/display-name': ['off'],
@@ -15,7 +19,7 @@ module.exports = {
 
     overrides: [
         {
-            files: ['./config/**/*.ts'],
+            files: ['./config/**/*'],
             rules: {
                 'max-lines-per-function': ['off'],
                 'no-console': ['off'],

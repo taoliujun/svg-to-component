@@ -10,7 +10,8 @@
     },
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "node"
     ],
   },
   "ts-node": {
