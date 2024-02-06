@@ -21,14 +21,14 @@
         "build:md": "cp -f ./README.zh_CN.md ./README.md"
     },
     "dependencies": {
-        "fast-xml-parser": "^4.2.2",
+        "fast-xml-parser": "^4.3.4",
         "lodash": "^4.17.21",
         "prettier": "^2.8.8"
     },
     "devDependencies": {
         "@tsconfig/node20": "^20.1.2",
-        "@types/lodash": "^4.14.195",
-        "@types/node": "^20.2.5",
+        "@types/lodash": "^4.14.202",
+        "@types/node": "^20.11.16",
         "@types/prettier": "^2.7.3"
     }
 }

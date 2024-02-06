@@ -5,4 +5,4 @@ chrome > 60
 ios >= 11
 
 [development]
-last 2 chrome versions
+last 10 chrome versions
