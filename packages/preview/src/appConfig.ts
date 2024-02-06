@@ -1,4 +1,4 @@
-import { pageConfig } from "./pageConfig";
+import { pageConfig } from './pageConfig';
 
 /** 应用配置 */
 export const appConfig = {
