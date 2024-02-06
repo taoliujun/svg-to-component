@@ -17,7 +17,7 @@
         "url": "https://github.com/taoliujun/svg-to-component/issues"
     },
     "engines": {
-        "node": "^20"
+        "node": "^20.11.0"
     },
     "files": [
         "lib",
