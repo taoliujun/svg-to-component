@@ -41,7 +41,7 @@ jobs:
             - name: commit
               run: |
                   git add .
-                  HUSKY=0 git commit -m "RELEASE: new version [skip ci]"
+                  HUSKY=0 git commit -m "RELEASE: new version [skip ci]" --allow-empty
 
             - name: push
               run: git push && git push --tags

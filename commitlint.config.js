@@ -18,7 +18,7 @@ const overrideRules = (ruleName, override, isOverride = false) => {
 module.exports = {
     extends: ['@commitlint/config-conventional'],
     rules: {
-        ...overrideRules('type-enum', ['RELEASING', 'RELEASE']),
+        ...overrideRules('type-enum', ['RELEASING']),
         ...overrideRules('type-case', ['upper-case']),
         ...overrideRules('subject-case', [], true),
     },
