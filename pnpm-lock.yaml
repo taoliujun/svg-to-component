@@ -131,8 +131,8 @@ importers:
         specifier: ^18.2.55
         version: 18.2.55
       '@types/react-color':
-        specifier: ^3.0.11
-        version: 3.0.11
+        specifier: ^3.0.12
+        version: 3.0.12
       '@types/react-dom':
         specifier: ^18.2.18
         version: 18.2.18
@@ -3349,8 +3349,8 @@ packages:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
     dev: false
 
-  /@types/react-color@3.0.11:
-    resolution: {integrity: sha512-20m5GpzmdqwmSdnPeMs4UPPUuvkS4ESwakL6u2YN1hbo+ajWiiTwGYIMGhdcJFGeoLyAsr7TVonbZrMhU3+pdw==}
+  /@types/react-color@3.0.12:
+    resolution: {integrity: sha512-pr3uKE3lSvf7GFo1Rn2K3QktiZQFFrSgSGJ/3iMvSOYWt2pPAJ97rVdVfhWxYJZ8prAEXzoP2XX//3qGSQgu7Q==}
     dependencies:
       '@types/react': 18.2.55
       '@types/reactcss': 1.2.11
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
