@@ -143,8 +143,8 @@ importers:
         specifier: ^1.18.4
         version: 1.18.4
       '@umijs/babel-preset-umi':
-        specifier: ^4.1.1
-        version: 4.1.1
+        specifier: ^4.1.5
+        version: 4.1.5
       ahooks:
         specifier: ^3.7.10
         version: 3.7.10(react@18.2.0)
@@ -3586,22 +3586,22 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@umijs/babel-preset-umi@4.1.1:
-    resolution: {integrity: sha512-6pYZnF03euAJGZN3VLe8PKKRNMH6Zxj4GKNooLvJ0Wz0eMufmYDcA4CpbR6h8i1JpgcQ0Sngr8bqHLb7oMqrvw==}
+  /@umijs/babel-preset-umi@4.1.5:
+    resolution: {integrity: sha512-TvIfDF33PoihOy2JlxUjRcJDanTY5v+WeKrAryp4mysVSF5Oygjlnvb3pFelmbLG03EYBPVrDLZQ9q9OGfyeUw==}
     dependencies:
       '@babel/runtime': 7.23.6
       '@bloomberg/record-tuple-polyfill': 0.0.4
-      '@umijs/bundler-utils': 4.1.1
-      '@umijs/utils': 4.1.1
+      '@umijs/bundler-utils': 4.1.5
+      '@umijs/utils': 4.1.5
       core-js: 3.34.0
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@umijs/bundler-utils@4.1.1:
-    resolution: {integrity: sha512-k1I1tjDePgB1XqpQHZiLJ/5gS4EykY8hqqzEzD1CSbd5KFE614+q6W/gcpFZ0YLJDWY1GdjOYpRokvuI/MSRfg==}
+  /@umijs/bundler-utils@4.1.5:
+    resolution: {integrity: sha512-vdJ1tXIpiHFvmmiyeb4mQVI56CPVpJJ07lmA64GZzcPxb8St0ztPTATMZIr2KZIQBC2qrnzMMQmFVZ8M3TWKyA==}
     dependencies:
-      '@umijs/utils': 4.1.1
+      '@umijs/utils': 4.1.5
       esbuild: 0.17.19
       regenerate: 1.4.2
       regenerate-unicode-properties: 10.1.1
@@ -3610,8 +3610,8 @@ packages:
       - supports-color
     dev: false
 
-  /@umijs/utils@4.1.1:
-    resolution: {integrity: sha512-hbnbJR3RA7fu4E7q4JFZ47XMYArr6Zn5bftr8YZ+o6hzJlomr4gzoOXE+XxM7rVMK4AFZoc+QZgNTJyISd08Pg==}
+  /@umijs/utils@4.1.5:
+    resolution: {integrity: sha512-fnl9URSuFkKvJSRSQN/jHvWO/CVCnQwp1MbIxkLVyZImK9P8SKwWeoff7/kScdBRngoShWf+9LR/3AYIW4EE4w==}
     dependencies:
       chokidar: 3.5.3
       pino: 7.11.0
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -8415,7 +8415,7 @@ packages:
     dev: false
 
   /once@1.4.0:
-    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=}
+    resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
       wrappy: 1.0.2
 
@@ -11472,7 +11472,7 @@ packages:
     dev: true
 
   /wrappy@1.0.2:
-    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
+    resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
   /write-file-atomic@4.0.2:
     resolution: {integrity: sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==}
