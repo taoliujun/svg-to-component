@@ -25,7 +25,7 @@
   "dependencies": {
     "@babel/core": "^7.23.9",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
-    "@tsconfig/create-react-app": "^2.0.2",
+    "@tsconfig/create-react-app": "^2.0.5",
     "@tsconfig/node20": "^20.1.2",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.11.16",

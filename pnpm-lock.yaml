@@ -116,8 +116,8 @@ importers:
         specifier: ^0.5.11
         version: 0.5.11(@types/webpack@5.28.5)(react-refresh@0.14.0)(webpack-dev-server@4.15.1)(webpack@5.90.1)
       '@tsconfig/create-react-app':
-        specifier: ^2.0.2
-        version: 2.0.2
+        specifier: ^2.0.5
+        version: 2.0.5
       '@tsconfig/node20':
         specifier: ^20.1.2
         version: 20.1.2
@@ -3120,8 +3120,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@tsconfig/create-react-app@2.0.2:
-    resolution: {integrity: sha512-PP+j4WWgypIvdY1+G5PgZIK5Kza/PpsbQgFQliDjlzXRXfQYmb6rB1ZUNUrWqAQ3Rr772CkE6BvTBI/j3cKr0A==}
+  /@tsconfig/create-react-app@2.0.5:
+    resolution: {integrity: sha512-NiXzSMJabQtVTPwFmBWX+eyee2dfhRSnQ6NNbtCZfXemGxOq+N0+RMPVYu+sz6riUZANHTnvvHoS1k87ksyDXg==}
     dev: false
 
   /@tsconfig/node10@1.0.9:
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
