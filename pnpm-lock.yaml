@@ -24,8 +24,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0(typescript@5.3.3)
       '@types/jest':
-        specifier: ^29.5.12
-        version: 29.5.12
+        specifier: ^29.5.14
+        version: 29.5.14
       husky:
         specifier: ^9.0.10
         version: 9.0.10
@@ -3267,8 +3267,8 @@ packages:
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
 
-  /@types/jest@29.5.12:
-    resolution: {integrity: sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==}
+  /@types/jest@29.5.14:
+    resolution: {integrity: sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ==}
     dependencies:
       expect: 29.7.0
       pretty-format: 29.7.0
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
