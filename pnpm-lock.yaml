@@ -173,8 +173,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(webpack@5.90.1)
       html-webpack-plugin:
-        specifier: ^5.6.0
-        version: 5.6.0(webpack@5.90.1)
+        specifier: ^5.6.3
+        version: 5.6.3(webpack@5.90.1)
       less:
         specifier: ^4.2.0
         version: 4.2.0
@@ -4326,7 +4326,7 @@ packages:
     dev: false
 
   /boolbase@1.0.0:
-    resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=}
+    resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: false
 
   /brace-expansion@1.1.11:
@@ -6578,8 +6578,8 @@ packages:
       terser: 5.27.0
     dev: false
 
-  /html-webpack-plugin@5.6.0(webpack@5.90.1):
-    resolution: {integrity: sha512-iwaY4wzbe48AfKLZ/Cc8k0L+FKG6oSNRaZ8x5A/T/IVDGyXcbHncM9TdDa93wn0FsSm82FhTKW7f3vS61thXAw==}
+  /html-webpack-plugin@5.6.3(webpack@5.90.1):
+    resolution: {integrity: sha512-QSf1yjtSAsmf7rYBV7XX86uua4W/vkhIt0xNXKbsi2foEeW7vjJQz4bhnpL3xH+l1ryl1680uNv968Z+X6jSYg==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -9862,7 +9862,7 @@ packages:
     dev: false
 
   /relateurl@0.2.7:
-    resolution: {integrity: sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=}
+    resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
     engines: {node: '>= 0.10'}
     dev: false
 
@@ -11088,7 +11088,7 @@ packages:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
 
   /utila@0.4.0:
-    resolution: {integrity: sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=}
+    resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
     dev: false
 
   /utils-merge@1.0.1:
