@@ -48,7 +48,7 @@
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.8.0",
+    "mini-css-extract-plugin": "^2.9.2",
     "node": "^21.6.1",
     "postcss": "^8.4.34",
     "postcss-loader": "^8.1.0",
