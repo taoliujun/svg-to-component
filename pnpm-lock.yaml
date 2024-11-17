@@ -218,8 +218,8 @@ importers:
         specifier: ^0.14.0
         version: 0.14.0
       react-resizable-panels:
-        specifier: ^2.0.3
-        version: 2.0.3(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^2.1.7
+        version: 2.1.7(react-dom@18.2.0)(react@18.2.0)
       react-router-dom:
         specifier: ^6.22.0
         version: 6.22.0(react-dom@18.2.0)(react@18.2.0)
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -9669,11 +9669,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-resizable-panels@2.0.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-m0upi03cdqCt/g/dUxRQkHiBzo0UDtMIYwcf8qhKM+QG0cnpusOVFKOD2ElpGrtxB/oIxTItuKYsDOeu76JHvg==}
+  /react-resizable-panels@2.1.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-JtT6gI+nURzhMYQYsx8DKkx6bSoOGFp7A3CwMrOb8y5jFHFyqwo9m68UhmXRw57fRVJksFn1TSlm3ywEQ9vMgA==}
     peerDependencies:
-      react: ^16.14.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+      react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
