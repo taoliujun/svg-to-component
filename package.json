@@ -19,7 +19,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.2",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.7.3"
   },
   "scripts": {
     "changelog": "npm exec changeset add",
