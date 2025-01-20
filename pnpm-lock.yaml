@@ -176,11 +176,11 @@ importers:
         specifier: ^5.6.0
         version: 5.6.0(webpack@5.90.1)
       less:
-        specifier: ^4.2.0
-        version: 4.2.0
+        specifier: ^4.2.2
+        version: 4.2.2
       less-loader:
         specifier: ^12.2.0
-        version: 12.2.0(less@4.2.0)(webpack@5.90.1)
+        version: 12.2.0(less@4.2.2)(webpack@5.90.1)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -6734,7 +6734,7 @@ packages:
     dev: true
 
   /image-size@0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -7750,7 +7750,7 @@ packages:
       shell-quote: 1.8.1
     dev: false
 
-  /less-loader@12.2.0(less@4.2.0)(webpack@5.90.1):
+  /less-loader@12.2.0(less@4.2.2)(webpack@5.90.1):
     resolution: {integrity: sha512-MYUxjSQSBUQmowc0l5nPieOYwMzGPUaTzB6inNW/bdPEG9zOL3eAAD1Qw5ZxSPk7we5dMojHwNODYMV1hq4EVg==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -7763,12 +7763,12 @@ packages:
       webpack:
         optional: true
     dependencies:
-      less: 4.2.0
+      less: 4.2.2
       webpack: 5.90.1(webpack-cli@5.1.4)
     dev: false
 
-  /less@4.2.0:
-    resolution: {integrity: sha512-P3b3HJDBtSzsXUl0im2L7gTO5Ubg8mEN6G8qoTS77iXxXX4Hvu4Qj540PZDvQ8V6DmX6iXo98k7Md0Cm1PrLaA==}
+  /less@4.2.2:
+    resolution: {integrity: sha512-tkuLHQlvWUTeQ3doAqnHbNn8T6WX1KA8yvbKG9x4VtKtIjHsVKQZCH11zRgAfbDAXC2UNIg/K9BYAAcEzUIrNg==}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
@@ -8624,7 +8624,7 @@ packages:
     dev: true
 
   /pify@2.3.0:
-    resolution: {integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw=}
+    resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -9567,7 +9567,7 @@ packages:
     dev: false
 
   /prr@1.0.1:
-    resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=}
+    resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
     requiresBuild: true
     dev: false
     optional: true
