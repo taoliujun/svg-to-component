@@ -27,7 +27,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@tsconfig/create-react-app": "^2.0.2",
     "@tsconfig/node20": "^20.1.2",
-    "@types/lodash": "^4.14.202",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.55",
     "@types/react-color": "^3.0.11",
