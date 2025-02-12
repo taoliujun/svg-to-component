@@ -52,7 +52,7 @@
     "node": "^21.6.1",
     "postcss": "^8.4.34",
     "postcss-loader": "^8.1.0",
-    "postcss-preset-env": "^9.3.0",
+    "postcss-preset-env": "^10.1.4",
     "postcss-px-to-viewport": "^1.1.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "react": "^18.2.0",
