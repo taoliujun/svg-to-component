@@ -23,12 +23,12 @@
     "dependencies": {
         "fast-xml-parser": "^4.3.4",
         "lodash": "^4.17.21",
-        "prettier": "^3.2.5"
+        "prettier": "^3.5.1"
     },
     "devDependencies": {
         "@tsconfig/node20": "^20.1.2",
         "@types/lodash": "^4.14.202",
         "@types/node": "^20.11.16",
-        "@types/prettier": "^2.7.3"
+        "@types/prettier": "^3.0.0"
     }
 }
