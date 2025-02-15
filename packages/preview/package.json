@@ -34,7 +34,7 @@
     "@types/react-dom": "^18.2.18",
     "@types/webpack": "^5.28.5",
     "@types/webpack-env": "^1.18.4",
-    "@umijs/babel-preset-umi": "^4.1.1",
+    "@umijs/babel-preset-umi": "^4.4.5",
     "ahooks": "^3.7.10",
     "autoprefixer": "^10.4.17",
     "babel-loader": "^9.1.3",
