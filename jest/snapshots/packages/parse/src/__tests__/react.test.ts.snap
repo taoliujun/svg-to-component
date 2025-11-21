@@ -5,7 +5,7 @@ exports[`generateReact default: isPreview 1`] = `
 import { getColor } from '../utils/helper';
 import type { SVGIconProps } from '../utils/types';
 
-export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
+export const Test1: FC<SVGIconProps> = ({ color = ['none', 'currentColor', 'currentColor'], ...props }) => {
     return (
         <svg
             data-preview-color-fill-index="1"
@@ -36,9 +36,6 @@ export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
         </svg>
     );
 };
-Test1.defaultProps = {
-    color: ['none', 'currentColor', 'currentColor'],
-};
 "
 `;
 
@@ -47,7 +44,7 @@ exports[`generateReact default: normal 1`] = `
 import { getColor } from '../utils/helper';
 import type { SVGIconProps } from '../utils/types';
 
-export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
+export const Test1: FC<SVGIconProps> = ({ color = ['none', 'currentColor', 'currentColor'], ...props }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,9 +57,6 @@ export const Test1: FC<SVGIconProps> = ({ color, ...props }) => {
             <circle cx="4" cy="4" r="4" fill={getColor(color, 3, 'currentColor')} fillOpacity="0.4" />
         </svg>
     );
-};
-Test1.defaultProps = {
-    color: ['none', 'currentColor', 'currentColor'],
 };
 "
 `;

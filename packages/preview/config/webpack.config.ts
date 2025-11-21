@@ -192,7 +192,8 @@ const webpackConfig = (): Configuration & {
                     ),
                     vendorCommon: {
                         chunks: 'all',
-                        test: (module: webpack.NormalModule) => {
+                        // test: (module: webpack.NormalModule) => {
+                        test: (module: any) => {
                             return (
                                 module.resource?.includes(nodeModules) ||
                                 (module.resource?.includes('/src/') && !module.resource?.includes('/src/pages/'))
