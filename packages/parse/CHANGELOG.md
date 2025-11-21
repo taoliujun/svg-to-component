@@ -1,5 +1,11 @@
 # svg-to-component-parse
 
+## 2.0.0
+
+### Major Changes
+
+- ea6e692: feat: update defaultprops
+
 ## 1.1.2
 
 ### Patch Changes
