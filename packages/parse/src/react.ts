@@ -1,4 +1,4 @@
-import { camelCase } from 'lodash';
+import { camelCase, uniq } from 'lodash';
 import { format as prettierFormat } from 'prettier';
 import { readFileSync } from 'fs';
 import path from 'path';
@@ -24,12 +24,17 @@ const generateComponentUtils: () => {
 
 // generate component template string
 const generateComponentCode = (componentName: string, content: string, colors: string[]) => {
-    const code = readFileSync(path.resolve(__dirname, './template/react/component.tpl.ts'), {
+    let code = readFileSync(path.resolve(__dirname, './template/react/component.tpl.ts'), {
         encoding: 'utf-8',
     })
         ?.replaceAll(`$componentName$`, componentName)
-        ?.replaceAll(`$content$`, content)
-        ?.replaceAll(`$colors$`, JSON.stringify(colors));
+        ?.replaceAll(`$content$`, content);
+
+    if (uniq(colors).length === 1) {
+        code = code?.replaceAll(`$colors$`, JSON.stringify(new Array(colors.length).fill('currentColor')));
+    } else {
+        code = code?.replaceAll(`$colors$`, JSON.stringify(colors));
+    }
 
     return code;
 };
@@ -61,7 +66,7 @@ const generateReact = async (
             if (tagName !== 'mask') {
                 ['fill', 'stroke', 'stop-color', 'flood-color', 'lighting-color'].forEach((k) => {
                     const value = attrs[k];
-                    if (value) {
+                    if (value && !['none', 'transparent'].includes(value)) {
                         originColors.push(value);
                         const index = originColors.length;
 
