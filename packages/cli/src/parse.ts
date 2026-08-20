@@ -48,41 +48,47 @@ const generateComponentFiles = async (opts: GenerateParams) => {
 
     const bar = new Progress(':bar :percent ', { total: filesLen });
 
-    await files.forEach(async (inputFile, index) => {
-        const fileInfo = path.parse(inputFile);
-        const relativePath = fileInfo.dir.replace(sourcePath, '');
-        const content = fs.readFileSync(inputFile, 'utf-8');
+    await Promise.all(
+        files.map(async (inputFile, index) => {
+            const fileInfo = path.parse(inputFile);
+            const relativePath = fileInfo.dir.replace(sourcePath, '');
+            const content = fs.readFileSync(inputFile, 'utf-8');
 
-        let outputFileName = '';
-        let outputFilePath = '';
-        let outputFile = '';
-        let outputContent = '';
+            let outputFileName = '';
+            let outputFilePath = '';
+            let outputFile = '';
+            let outputContent = '';
 
-        if (template === 'react') {
-            outputFileName = upperFirst(camelCase(fileInfo.name));
-            outputFilePath = path.resolve(outputPath, `./${relativePath}`, outputFileName);
-            outputFile = path.resolve(outputFilePath, `index.tsx`);
-            outputContent = await generateReact(outputFileName, content, {
-                isPreview,
+            if (template === 'react') {
+                outputFileName = upperFirst(camelCase(fileInfo.name));
+                outputFilePath = path.resolve(outputPath, `./${relativePath}`, outputFileName);
+                outputFile = path.resolve(outputFilePath, `index.tsx`);
+
+                // utils 文件生成在 outputPath/utils 下，组件嵌套的子目录越深，回到 utils 需要越多层 '../'
+                const depth = relativePath.split(path.sep).filter(Boolean).length + 1;
+                outputContent = await generateReact(outputFileName, content, {
+                    isPreview,
+                    utilsPath: '../'.repeat(depth),
+                });
+            }
+
+            fs.mkdirSync(outputFilePath, { recursive: true });
+            fs.writeFileSync(outputFile, outputContent, {
+                encoding: 'utf-8',
             });
-        }
 
-        fs.mkdirSync(outputFilePath, { recursive: true });
-        fs.writeFileSync(outputFile, outputContent, {
-            encoding: 'utf-8',
-        });
-
-        if (debug) {
-            log(`[${index + 1}/${filesLen}]`, outputMain.bold(fileInfo.base));
-            log(outputSecond('source file:'), outputMain(inputFile));
-            log(outputSecond('output file:'), outputMain(outputFile));
-            log(`\n`);
-            log(outputSecond(outputContent));
-            log(`\n`);
-        } else {
-            bar.tick();
-        }
-    });
+            if (debug) {
+                log(`[${index + 1}/${filesLen}]`, outputMain.bold(fileInfo.base));
+                log(outputSecond('source file:'), outputMain(inputFile));
+                log(outputSecond('output file:'), outputMain(outputFile));
+                log(`\n`);
+                log(outputSecond(outputContent));
+                log(`\n`);
+            } else {
+                bar.tick();
+            }
+        }),
+    );
 
     bar.terminate();
 

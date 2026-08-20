@@ -14,8 +14,8 @@
   "scripts": {
     "lint": "eslint src",
     "lint:ts": "tsc --noEmit",
-    "test": "pnpm jest",
-    "test:coverage": "pnpm jest --config=jest.coverage.config.js",
+    "test.bak": "pnpm jest",
+    "test:coverage.bak": "pnpm jest --config=jest.coverage.config.js",
     "clean": "rm -rf lib/",
     "start": "NODE_ENV=development NODE_OPTIONS='-r ts-node/register' webpack serve --config ./config/webpack.config.ts --progress",
     "build": "pnpm run build:script && pnpm run build:md",

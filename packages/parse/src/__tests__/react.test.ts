@@ -23,6 +23,20 @@ describe('generateReact', () => {
         );
         expect(ret2).toMatchSnapshot('isPreview');
     });
+
+    test('nested dir utilsPath', async () => {
+        const ret = await generateReact(
+            'Test1',
+            `<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <circle cx="4" cy="4" r="2" fill="currentColor" />
+            </svg>`,
+            {
+                utilsPath: '../../',
+            },
+        );
+        expect(ret).toContain("from '../../utils/helper'");
+        expect(ret).toContain("from '../../utils/types'");
+    });
 });
 
 describe('generateComponentUtils', () => {

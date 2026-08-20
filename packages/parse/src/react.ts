@@ -23,11 +23,18 @@ const generateComponentUtils: () => {
 };
 
 // generate component template string
-const generateComponentCode = (componentName: string, content: string, colors: string[]) => {
+const generateComponentCode = (
+    componentName: string,
+    content: string,
+    colors: string[],
+    // relative prefix from component dir to the utils dir, e.g. '../' or '../../'
+    utilsPath = '../',
+) => {
     let code = readFileSync(path.resolve(__dirname, './template/react/component.tpl.ts'), {
         encoding: 'utf-8',
     })
         ?.replaceAll(`$componentName$`, componentName)
+        ?.replaceAll(`$utilsPath$`, utilsPath)
         ?.replaceAll(`$content$`, content);
 
     if (uniq(colors).length === 1) {
@@ -45,9 +52,10 @@ const generateReact = async (
     content: string,
     opts?: {
         isPreview?: boolean;
+        utilsPath?: string;
     },
 ) => {
-    const { isPreview = false } = opts || {};
+    const { isPreview = false, utilsPath = '../' } = opts || {};
 
     const originColors: string[] = [];
 
@@ -99,7 +107,7 @@ const generateReact = async (
     // inject correct getColor function
     code = code.replaceAll(/"{getColor\((.+?), (.+?), (.+?)\)}"/g, `{getColor($1,$2,'$3')}`);
 
-    code = generateComponentCode(componentName, code, originColors);
+    code = generateComponentCode(componentName, code, originColors, utilsPath);
 
     code = await prettierFormat(code, {
         printWidth: 120,
