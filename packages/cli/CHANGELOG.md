@@ -1,5 +1,17 @@
 # svg-to-component-cli
 
+## 2.0.0
+
+### Major Changes
+
+- 8859403: 支持多级icons
+
+### Patch Changes
+
+- Updated dependencies [8859403]
+    - svg-to-component-parse@2.0.2
+    - svg-to-component-preview@2.0.1
+
 ## 1.3.2
 
 ### Patch Changes
