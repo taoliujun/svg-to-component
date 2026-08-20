@@ -1,5 +1,13 @@
 # svg-to-component-cli
 
+## 2.0.1
+
+### Patch Changes
+
+- 34539bc: 升级cli
+- Updated dependencies [34539bc]
+    - svg-to-component-preview@2.0.3
+
 ## 2.0.0
 
 ### Major Changes
